@@ -13,6 +13,7 @@ class Game extends Component {
       submissions: [],
       index: 1,
       isSubmitted: false,
+      lastLine: "",
     }
   }
 
@@ -21,7 +22,7 @@ class Game extends Component {
 
     const submissions = this.state.submissions;
     submissions.push(newLine);
-    this.setState({submissions,})
+    this.setState({submissions, lastLine:newLine})
   }
 
   render() {
@@ -46,11 +47,11 @@ class Game extends Component {
           { exampleFormat }
         </p>
 
-        <RecentSubmission />
+        <RecentSubmission lastLine={ this.state.lastLine } isSubmitted={this.state.isSubmitted}/>
 
-        <PlayerSubmissionForm fields={FIELDS} index={this.state.index} onSubmitCallback={this.state.submitLine} />
+        <PlayerSubmissionForm fields={FIELDS} index={this.state.index} onSubmitCallback={this.state.submitLine} isSubmitted={this.state.isSubmitted} />
 
-        <FinalPoem />
+        <FinalPoem poem={ this.state.submissions } isSubmitted={this.state.isSubmitted}/>
 
       </div>
     );
