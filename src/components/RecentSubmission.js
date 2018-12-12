@@ -13,7 +13,6 @@ const RecentSubmission = (props) => {
 
 RecentSubmission.PropTypes = {
   lastLine: PropTypes.string.isRequired,
-  isSubmitted: PropTypes.bool.isRequired,
 }
 
 export default RecentSubmission;
