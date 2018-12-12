@@ -49,7 +49,7 @@ class Game extends Component {
 
         <RecentSubmission lastLine={ this.state.lastLine } isSubmitted={this.state.isSubmitted}/>
 
-        <PlayerSubmissionForm fields={FIELDS} index={this.state.player} onSubmitCallback={this.state.submitLine} isSubmitted={this.state.isSubmitted} />
+        <PlayerSubmissionForm fields={FIELDS} index={this.state.player} sendSubmissionCallback={this.submitLine} isSubmitted={this.state.isSubmitted} />
 
         <FinalPoem poem={ this.state.submissions } isSubmitted={this.state.isSubmitted}/>
 

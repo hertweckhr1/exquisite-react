@@ -53,7 +53,7 @@ class PlayerSubmissionForm extends Component {
                       type="text"
                       name={field.key}
                       onChange={this.onFieldChangeHandler}
-                      className={this.state[field.key] === "" ? "PLayerSubmForm__input--invalid" : "PlayerSubmissionForm__input"} />
+                      className={this.state[field.key] === "" ? "PlayerSubmissionForm__input--invalid" : "PlayerSubmissionForm__input"} />
       } else {
         return field;
       }
